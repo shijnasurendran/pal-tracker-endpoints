@@ -36,3 +36,6 @@ bootRun.environment([
         "cf.instance.index":"123",
         "cf.instance.addr":"123"
 ])
+test.environment([
+        "message":"Hello from test"
+        ])

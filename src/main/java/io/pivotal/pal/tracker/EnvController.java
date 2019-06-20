@@ -15,10 +15,10 @@ public class EnvController {
     String CF_INSTANCE_ADDR;
 
 
-    public EnvController(@Value("${port}") String PORT,
-                         @Value("${memory.limit}") String MEMORY_LIMIT,
-                         @Value("${cf.instance.index}") String CF_INSTANCE_INDEX,
-                         @Value("${cf.instance.addr}") String CF_INSTANCE_ADDR) {
+    public EnvController(@Value("${port:NOT SET}") String PORT,
+                         @Value("${memory.limit:NOT SET}") String MEMORY_LIMIT,
+                         @Value("${cf.instance.index:NOT SET}") String CF_INSTANCE_INDEX,
+                         @Value("${cf.instance.addr:NOT SET}") String CF_INSTANCE_ADDR) {
         this.PORT = PORT;
         this.MEMORY_LIMIT = MEMORY_LIMIT;
         this.CF_INSTANCE_INDEX = CF_INSTANCE_INDEX;
