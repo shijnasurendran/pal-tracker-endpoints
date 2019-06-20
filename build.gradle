@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = "2.0.6.RELEASE"
+        springBootVersion = "2.1.5.RELEASE"
     }
 
     repositories {
@@ -25,4 +25,14 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+    testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+    testCompile("org.mockito:mockito-core")
+    testCompile("junit:junit")
 }
+bootRun.environment([
+        "message":"hi from gradle",
+        "port":"123",
+        "memory.limit":"123",
+        "cf.instance.index":"123",
+        "cf.instance.addr":"123"
+])
